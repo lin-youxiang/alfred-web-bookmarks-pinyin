@@ -1,46 +1,20 @@
 # alfred-web-bookmarks-pinyin
-这是我的一个书签。
 
-~~~json
-{
-	"date_added": "13298050222711550",
-	"date_last_used": "0",
-	"guid": "820a51f4-8ab1-49df-bc70-0cd29382eeb",
-	"id": "885",
-	"name": "Downie - 视频下载",
-	"type": "url",
-	"url": "https://software.charliemonroe.net/downie/"
-}
-~~~
+## 介绍
 
-搜索”视频下载“可以搜出来，但是搜索 “shipinxiazai” 搜不出来。
+[让 Alfred 自带的书签搜索支持拼音功能](https://kudoryafuka3.github.io/2023/08/13/%E8%AE%A9-Alfred-%E8%87%AA%E5%B8%A6%E7%9A%84%E4%B9%A6%E7%AD%BE%E6%90%9C%E7%B4%A2%E6%94%AF%E6%8C%81%E6%8B%BC%E9%9F%B3%E5%8A%9F%E8%83%BD/)
 
-![image-20230812214758164](https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20230812214758.png)
+## 使用
 
-![image-20230812214842456](https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20230812214842.png)
+修改 `bookmarks_pinyin.py` 中 `file_path = '{{your_bookmarks_file_path}}'`，改成你本地的书签路径即可。
 
-但是如果修改 `Bookmarks` 如下图所示。
+### 书签路径
 
-~~~json
-{
-	"date_added": "13298050222711550",
-	"date_last_used": "0",
-	"guid": "820a51f4-8ab1-49df-bc70-0cd29382eeb",
-	"id": "885",
-	"name": "Downie - 视频下载\rshipinxiazai",
-	"type": "url",
-	"url": "https://software.charliemonroe.net/downie/"
-}
-~~~
+Chrome: `/Users/{{user_name}}/Library/Application Support/Google/Chrome/Default/Bookmarks`
 
-那么又可以被拼音搜出来，并且不会把拼音内容显示在 Alfred 上。
+### 用到的包
 
-![image-20230812215118069](https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20230812215118.png)
+- pypinyin
 
-可以用 Python 对所有书签做这样的批处理，但是只要 Chrome 更新了 `Bookmarks` 文件，就会覆盖掉我们 DIY 的内容。这要怎么解决呢？
 
-- 定时任务？
-  - 有延迟
-  - 太频繁又没必要
-- 监听 `Bookmarks` 的修改？ 
-  - how？
+
