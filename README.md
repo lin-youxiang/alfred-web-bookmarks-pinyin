@@ -36,7 +36,7 @@ Chrome: `/Users/{{user_name}}/Library/Application Support/Google/Chrome/Default/
         <string>/path/to/your/python/script.py</string>
     </array>
     <key>StartInterval</key>
-    <integer>300</integer>
+    <integer>60</integer>
     <key>RunAtLoad</key>
     <true/>
 </dict>
