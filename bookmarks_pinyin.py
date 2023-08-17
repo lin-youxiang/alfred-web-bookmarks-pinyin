@@ -1,5 +1,6 @@
 import string
 import json
+import jieba
 
 from pypinyin import lazy_pinyin
 
@@ -11,11 +12,14 @@ def process_name(obj):
     if isinstance(obj, dict):
         for key, value in obj.items():
             if key == "name" and isinstance(value, str) and '\r' not in value:
-                pinyin_result = lazy_pinyin(value)
-                pinyin_result = [
-                    word for word in pinyin_result if word not in string.punctuation and word != ' ']
+                # Split the name value into words
+                words = jieba.cut_for_search(value)
+                words_with_space = ' '.join(words)
+
                 # Convert the name value to pinyin
+                pinyin_result = lazy_pinyin(words_with_space)
                 pinyin_name = ''.join(pinyin_result)
+                
                 # Append the pinyin name to the original value
                 obj[key] = f"{value}\r{pinyin_name}"
             else:
