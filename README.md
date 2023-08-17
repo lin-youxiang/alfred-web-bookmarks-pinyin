@@ -4,6 +4,8 @@
 
 [让 Alfred 自带的书签搜索支持拼音功能](https://kudoryafuka3.github.io/2023/08/13/%E8%AE%A9-Alfred-%E8%87%AA%E5%B8%A6%E7%9A%84%E4%B9%A6%E7%AD%BE%E6%90%9C%E7%B4%A2%E6%94%AF%E6%8C%81%E6%8B%BC%E9%9F%B3%E5%8A%9F%E8%83%BD/)
 
+原生 Alfred 的书签搜索有点呆呆的，对中文不太友好。比如一个书签叫做”明日方舟“，你搜索”方舟”就有可能搜索不到。所以这里加入了 jieba 分词，采用 jieba 分词搜索模式，先分词再做拼音化，搜索书签体验 🆙🆙🆙
+
 ## 使用
 ### Python 脚本
 修改 `bookmarks_pinyin.py` 中 `file_path = '{{your_bookmarks_file_path}}'`，改成你本地的书签路径即可。
@@ -15,6 +17,7 @@ Chrome: `/Users/{{user_name}}/Library/Application Support/Google/Chrome/Default/
 #### 用到的包
 
 - pypinyin
+- jieba
 
 ### 定时任务
 因为我们修改的书签文件会被 Chrome 更新覆盖，所以这边用 Mac 的定时任务，定时执行我们的 Python 脚本。在 macOS 上，可以使用 `launchd` 服务来创建定时任务。为了每 5 分钟执行一个 Python 脚本，需要创建一个 `launchd` plist 文件并将其放在 `~/Library/LaunchAgents/` 目录下。
