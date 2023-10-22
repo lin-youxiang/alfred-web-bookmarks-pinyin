@@ -50,13 +50,6 @@ Chrome: `~/Library/Application Support/Google/Chrome/Default/Bookmarks`
 
    如果你看到与 `com.mycompany.myscript` 相关的输出，那么任务已经被正确地加载。
 
-### 取消定时任务
-
-如果你想在某个时候取消这个定时任务，只需运行以下命令：
-
-```bash
-launchctl unload ~/Library/LaunchAgents/com.mycompany.myscript.plist
-```
 
 ## 其他问题
 
@@ -65,3 +58,11 @@ launchctl unload ~/Library/LaunchAgents/com.mycompany.myscript.plist
 解决办法：执行 `sudo sfltool resetbtm`
 
 参考链接：[后台项目已添加的通知如何关闭](https://discussionschinese.apple.com/thread/254470532)
+
+### 取消定时任务
+
+如果你想在某个时候取消这个定时任务，只需运行以下命令：
+
+```bash
+launchctl unload ~/Library/LaunchAgents/com.mycompany.myscript.plist
+```
