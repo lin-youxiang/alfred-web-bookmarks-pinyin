@@ -49,7 +49,7 @@ def process_name(obj):
             process_name(item)
 
 
-file_path = '/Users/ritsu/Library/Application Support/Google/Chrome/Default/Bookmarks'
+file_path = '~/Library/Application Support/Google/Chrome/Default/Bookmarks'
 
 # 以二进制模式读取JSON文件
 with open(file_path, 'rb') as file:

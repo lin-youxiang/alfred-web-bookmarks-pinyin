@@ -13,7 +13,7 @@
 
 #### 书签路径
 
-Chrome: `/Users/{{user_name}}/Library/Application Support/Google/Chrome/Default/Bookmarks`
+Chrome: `~/Library/Application Support/Google/Chrome/Default/Bookmarks`
 
 #### 用到的包
 

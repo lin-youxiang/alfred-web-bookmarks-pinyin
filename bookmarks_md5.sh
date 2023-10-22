@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 被监控的文件路径，即书签路径
-FILE_TO_WATCH="/Users/ritsu/Library/Application Support/Google/Chrome/Default/Bookmarks"
+FILE_TO_WATCH="~/Library/Application Support/Google/Chrome/Default/Bookmarks"
 
 # 存储 MD5 值的文件路径
 STORED_CHECKSUM_FILE="./stored_checksum.md5"
