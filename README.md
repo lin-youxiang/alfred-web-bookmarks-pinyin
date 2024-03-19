@@ -32,7 +32,7 @@ Chrome: `~/Library/Application Support/Google/Chrome/Default/Bookmarks`
 
 3. 修改 `com.mycompany.myscript.plist`
 
-   ![image-20231022154148018](/Users/ritsu/Library/Application%20Support/typora-user-images/image-20231022154148018.png)
+   ![image-20231022154148018](https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240319230301.png)
 
 4. 复制 `com.mycompany.myscript.plist` 文件到 `~/LaunchAgents`
 
