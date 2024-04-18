@@ -1,6 +1,7 @@
 import string
 import json
 import jieba
+import os
 
 from pypinyin import lazy_pinyin
 
@@ -58,7 +59,7 @@ def process_name(obj):
             process_name(item)
 
 
-file_path = '~/Library/Application Support/Google/Chrome/Default/Bookmarks'
+file_path = os.path.expanduser('~/Library/Application Support/Google/Chrome/Default/Bookmarks')
 
 # 以二进制模式读取JSON文件
 with open(file_path, 'rb') as file:
