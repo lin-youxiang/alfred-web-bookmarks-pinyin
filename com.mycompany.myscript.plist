@@ -6,7 +6,7 @@
     <string>com.mycompany.myscript</string>
     <key>ProgramArguments</key>
     <array>
-        <string>{{这里修改成 bookmarks_md5.sh 的绝对路径}}</string>
+        <string>{{这里修改成 execute_python_script.sh 的绝对路径}}</string>
     </array>
     <key>StartInterval</key>
     <integer>60</integer>
