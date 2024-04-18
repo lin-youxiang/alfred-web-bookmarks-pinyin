@@ -6,6 +6,15 @@ from pypinyin import lazy_pinyin
 
 jieba.setLogLevel(jieba.logging.INFO)
 
+def shouldUpdateBookmark(data): 
+    if 'shouldUpdate' in data:
+        # 检查 'shouldUpdate' 的值是否为 True
+        if data['shouldUpdate'] is True:
+            process_name(data)  # 调用处理函数
+            data['shouldUpdate'] = False  # 将 'shouldUpdate' 的值设置为 False
+    else:
+        process_name(data)  # 因为 'shouldUpdate' 不存在，调用处理函数
+        data['shouldUpdate'] = False  # 在字典中添加 'shouldUpdate' 并设置为 False
 
 def process_name(obj):
     """
@@ -56,7 +65,7 @@ with open(file_path, 'rb') as file:
     content = json.loads(file.read().decode('utf-8'))
 
 # 处理内容
-process_name(content)
+shouldUpdateBookmark(content)
 
 # 以二进制模式将处理的内容写回到新文件
 with open(file_path, 'wb') as file:

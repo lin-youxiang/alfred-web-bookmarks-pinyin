@@ -34,7 +34,7 @@ Chrome: `~/Library/Application Support/Google/Chrome/Default/Bookmarks`
 
    ![image-20231022154148018](https://ritsurin-1309788983.cos.ap-guangzhou.myqcloud.com/img/20240319230301.png)
 
-4. 复制 `com.mycompany.myscript.plist` 文件到 `~/LaunchAgents`
+4. 复制 `com.mycompany.myscript.plist` 文件到 `~/Library/LaunchAgents`
 
 5. 加载定时任务
 
